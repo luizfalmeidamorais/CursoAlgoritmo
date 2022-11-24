@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="User"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-05-07 09:35:12 "/>
+        <attribute name="created" value="VXNlcjtERVNLVE9QLU9KM0ZQVEE7MjAyMS0wNS0wNzsiMDk6MjU6MTYgIjsyNjk2"/>
+        <attribute name="edited" value="VXNlcjtERVNLVE9QLU9KM0ZQVEE7MjAyMS0wNS0wNzsiMDk6MzU6MTIgIjsxOzI4MDE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="janeiro, fevereiro, marco, abril, total, media, extra" type="Real" array="False" size=""/>
+            <output expression="&quot;Insira em R$ quanto voc&#234; vendeu em Janeiro:&quot;" newline="True"/>
+            <input variable="janeiro"/>
+            <output expression="&quot;Insira em R$ quanto voc&#234; vendeu em Fevereiro:&quot;" newline="True"/>
+            <input variable="fevereiro"/>
+            <output expression="&quot;Insira em R$ quanto voc&#234; vendeu em Mar&#231;o:&quot;" newline="True"/>
+            <input variable="marco"/>
+            <output expression="&quot;Insira em R$ quanto voc&#234; vendeu em Abril:&quot;" newline="True"/>
+            <input variable="abril"/>
+            <output expression="&quot;Nesses quatro meses, voc&#234; teve um total de vendas de:&quot;" newline="True"/>
+            <assign variable="total" expression="janeiro + fevereiro + marco + abril"/>
+            <output expression="total" newline="True"/>
+            <output expression="&quot;A m&#233;dia de vendas foi de:&quot;" newline="True"/>
+            <assign variable="media" expression="total / 4"/>
+            <output expression="media" newline="True"/>
+            <if expression="media &gt;= 5000">
+                <then>
+                    <output expression="&quot;Parab&#233;ns, voc&#234; atingiu a meta e receber&#225; um EXTRA de 10%.&quot;" newline="True"/>
+                    <assign variable="extra" expression="(total / 100) * 10"/>
+                </then>
+                <else>
+                    <output expression="&quot;Voc&#234; n&#227;o atingiu a meta, mas vamos l&#225;, se anime. Voc&#234; receber&#225; um EXTRA de 3%.&quot;" newline="True"/>
+                    <assign variable="extra" expression="(total / 100) * 3"/>
+                </else>
+            </if>
+            <output expression="extra" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
